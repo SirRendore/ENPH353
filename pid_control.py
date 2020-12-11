@@ -73,7 +73,7 @@ def process_image(cv_image):
     cv2.waitKey(1)
 
     # Locate turning point if needed
-    if ready_to_turn and location == "outside" and np.count_nonzero(left_side) > 95000 and np.count_nonzero(front_side) > 51000:  # Turning point found
+    if ready_to_turn and location == "outside" and np.count_nonzero(left_side) > 95000 and np.count_nonzero(front_side) < 51000:  # Turning point found
         print("Turning into inside")
         cmd_pub.publish(Twist())
         change_location("turning")
