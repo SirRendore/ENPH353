@@ -155,7 +155,7 @@ def foward_and_left(max_forward_count, max_turn_count, new_loc):
         print("Finished turning")
     return twist
 
-# Spin 180 degrees
+# Sweep back and forth
 spin_count = 0
 spin_opposite = False
 def sweep(time, cur_loc):
